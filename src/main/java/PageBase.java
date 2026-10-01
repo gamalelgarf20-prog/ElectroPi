@@ -15,12 +15,11 @@ public class PageBase {
     protected static WebDriver Driver;
 
     public static WebDriverWait wait;
-    public JavascriptExecutor js;
+
 
     public PageBase(WebDriver driver) {
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 70);
-        js = (JavascriptExecutor) driver;
         this.Driver = driver;
     }
 
